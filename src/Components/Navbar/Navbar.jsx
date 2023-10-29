@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import "./navbar.css";
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import styled from 'styled-components';
 
 function Navbar() {
   return (
+    <div className="fixed-top">
     <nav className="navClass">
       <div className="divClass">
         <img
@@ -22,6 +25,9 @@ function Navbar() {
         <Link className="pages" to="/Kids">
           Kids
         </Link>
+        <Link className="pages" to="/Camping">
+          Camping
+        </Link>
         <Link className="pages" to="/ContactUs">
           Contact Us
         </Link>
@@ -30,6 +36,7 @@ function Navbar() {
         </Link>
       </div>
     </nav>
+    </div>
   );
 }
 

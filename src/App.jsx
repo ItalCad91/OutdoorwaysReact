@@ -1,12 +1,12 @@
 import Navbar from "./Components/Navbar/Navbar";
-
-
 import Home from './Components/Home'
 import AboutPage from './Components/About'
 import ContactPage from './Components/ContactUs'
 import Kids from './Components/Kids'
 import Women from './Components/Women'
 import Men from './Components/Men'
+import Camping from "./Components/Camping";
+import Footer from "./Components/Navbar/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -24,9 +24,13 @@ function App() {
         <Route path="/Women" element={<Women />} />
         <Route path="/Men" element={<Men />} />
         <Route path="/Contact" element={<ContactPage />} />
+        <Route path="/Camping" element={<Camping />}/>
         </Routes>
-        </div>
-        </div>
+    </div>
+    </div>
+    <div>
+      <Footer/>
+    </div>
     </BrowserRouter>
   )
 }
