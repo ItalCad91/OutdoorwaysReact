@@ -1,22 +1,4 @@
-.pages {
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  .fixed
-  {
-    
-  }
-
-  .navClass
-  {
-    background-color: darkblue;
-  }
-
-  .divClass
-  {
-    padding: 20px;
-    max-width: 100%;
-  }
+/* Change the background color of the mobile dropdown menu button */
+.navbar-toggler-icon {
+  background-color:white; /* Replace 'your-color' with your desired background color */
+}
