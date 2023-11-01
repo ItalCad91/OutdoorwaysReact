@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 function Camping() {
-    const FeaturetteDivider = styled.hr`margin: 5rem 0; `;
-    const Title1 = styled.h1`text-align: center; color: grey`;
-    const Margin = styled.div` padding-bottom: 100px;
-`
+    const FeaturetteDivider = styled.hr`margin: 5rem 0;`;
+    const Title1 = styled.h1`text-align: center; color: grey; padding-top: 100px`;
+    const Margin = styled.div` padding-bottom: 100px;`;
+
   return (
     <div> 
      <Title1>Check out our camping gear</Title1>

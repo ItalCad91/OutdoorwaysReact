@@ -1,9 +1,115 @@
-import React from 'react'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-function Men() {
+const Men = () => {
   return (
-    <div>Men</div>
-  )
-}
+    <>
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+        name="description"
+        content="Buy the best quality products at the lowest price."
+      />
+      <meta name="keywords" content="products, online shopping, discounts" />
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossOrigin="anonymous"
+      />
+      <div className="container my-5">
+        <div className="row" style={{ marginTop: "150px" }}>
+          <div className="col-md-12">
+            <h2 className="mb-4 text-center">Welcome to Outdoorways Men section</h2>
+            <p className="text-center lead">
+              Discover the best quality products at unbeatable prices. Our online
+              store offers a wide range of products, from fashion and beauty to home
+              and electronics. With fast and reliable shipping, you can shop with
+              confidence and ease. Plus, take advantage of our exclusive discounts
+              and deals. Start shopping now and enjoy the ultimate online shopping
+              experience.
+            </p>
+          </div>
+        </div>
+        <form className="d-flex" role="search">
+          <input
+            className="form-control me-2"
+            type="search"
+            id="search-item"
+            placeholder="Search for a product"
+            aria-label="Search"
+          />
+          <button className="btn" type="submit">
+            Search
+          </button>
+        </form>
+        <main style={{padding:"100px"}}>
+        <Product
+          imageSrc="../images/bootsMen.png"
+          name="Hiking Boots"
+          description="Durable and comfortable footwear designed for long hikes and uneven terrain, offering ample support and grip for a more secure footing."
+          price="$98.00"
+          link="https://square.link/u/xcNE70hA"
+        />
+        <Product
+          imageSrc="../images/softshellMen.png"
+          name="Softshell Jacket"
+          description="A stretchy and versatile jacket that provides protection from wind, light rain, and moderate temperatures, suitable for a wide range of outdoor activities."
+          price="$99.99"
+          link="https://square.link/u/PjDDj69L"
+        />
+        <Product
+          imageSrc="../images/Pole.png"
+          name="Trekking Poles"
+          description="Adjustable and lightweight poles that provide stability and balance while walking on rugged terrain or steep inclines, reducing the impact on knees and joints."
+          price="$35.00"
+          link="https://square.link/u/HuuzjD0Z"
+        />
+        <Product
+          imageSrc="../images/hatMen.png"
+          name="Outdoor Trekking Hat"
+          description="A wide-brimmed hat with UPF sun protection, designed to shield your face, neck, and shoulders from harmful UV rays while keeping you cool and comfortable."
+          price="$9.99"
+          link="https://square.link/u/fX3BKclp"
+        />
+        <Product
+          imageSrc="../images/Bottle.png"
+          name="Insulated Camping Water Bottle"
+          description="A vacuum-sealed bottle that keeps drinks cold or hot for hours, made of high-quality materials that are resistant to leaks and spills."
+          price="$29.99"
+          link="https://square.link/u/H3HM2qU6"
+        />
+        </main>
+      </div>
+    </>
+  );
+};
 
-export default Men
+const Product = ({ imageSrc, name, description, price, link }) => {
+  return (
+    <>
+      <hr />
+      <div className="row">
+        <div className="col-md-6">
+          <img src={imageSrc} alt="Product Image" className="img-fluid product-image" />
+        </div>
+        <div className="col-md-6 product">
+          <h1 className="mb-3 product-name">{name}</h1>
+          <p className="text-muted">{description}</p>
+          <p className="font-weight-bold">{price}</p>
+          <div className="d-flex">
+            <button
+              className="btn btn-primary mr-2"
+              onClick={() => window.open(link, '_blank')}
+            >
+              Buy Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Men;

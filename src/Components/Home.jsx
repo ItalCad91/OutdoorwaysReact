@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-
 const MainWrapper = styled.main`
   padding-bottom: 100px;
   color: #5a5a5a;
@@ -28,6 +27,7 @@ const FeaturetteDivider = styled.hr`
 
 const FeaturetteHeading = styled.h2`
   letter-spacing: -0.05rem;
+  margin-top: 3rem; /* Add margin to move the section up */
 
   @media (min-width: 40em) {
     font-size: 50px;
@@ -46,10 +46,10 @@ function Home() {
           <CarouselItem className="carousel-item active">
             <img
               className="imgPadding"
-              src="../images/Adventure.jpg"
+              src="../images/Adv1.jpg"
               alt="logo"
               width="100%"
-              height="auto"
+              height="700px"
             />
             <div className="container">
               <CarouselCaption className="carousel-caption">
@@ -109,9 +109,6 @@ function Home() {
           <span className="visually-hidden">Next</span>
         </button>
       </Carousel>
-
-      <br />
-
       <FeaturetteHeading style={{ textAlign: "center" }}>
         Discover inspiration!
       </FeaturetteHeading>

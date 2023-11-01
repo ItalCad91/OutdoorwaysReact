@@ -13,6 +13,7 @@ const FeaturetteDivider = styled.hr`
 
 const FeaturetteHeading = styled.h2`
   letter-spacing: -0.05rem;
+  padding-top: 100px;
 
   @media (min-width: 40em) {
     font-size: 50px;
