@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faPinterest, faTiktok } from '@fortawesome/free-brands-svg-icons';
 
 const FooterWrapper = styled.footer`
   background-color: darkblue;
@@ -79,27 +79,26 @@ function Footer() {
             <FontAwesomeIcon icon={faInstagram} />
           </SocialMediaLink>
           <SocialMediaLink
-            href="https://github.com/CanTekProject"
+            href="https://www.pinterest.com"
             className="socialIcon"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faPinterest} />
           </SocialMediaLink>
           <SocialMediaLink
-            href="https://www.discord.com"
+            href="https://www.tiktok.com"
             className="socialIcon"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faDiscord} />
+            <FontAwesomeIcon icon={faTiktok} />
           </SocialMediaLink>
         </SocialMediaSection>
           <div>
             <PrivacyLink to="/Privacy">Privacy</PrivacyLink>
           </div>
         </FooterContent>
-       
       </div>
     </FooterWrapper>
   );
