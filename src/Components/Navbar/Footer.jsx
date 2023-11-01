@@ -1,28 +1,105 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
-const FooterWrapper = styled.nav`
+const FooterWrapper = styled.footer`
   background-color: darkblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+`;
+
+const FooterContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 `;
 
 const FooterText = styled.p`
-color: white;
-padding: 20px;
-text-align: center;
-text-decoration: none;
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
 `;
 
 const CopyrightText = styled.span`
-  color: withe;
+  color: white;
+`;
+
+const PrivacyLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+`;
+
+const SocialMediaSection = styled.div`
+  margin-top: 10px;
+`;
+
+const SocialMediaLink = styled.a`
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 24px;
 `;
 
 function Footer() {
   return (
     <FooterWrapper className="fixed-bottom">
       <div className="container-fluid">
-        <FooterText>
-          <CopyrightText>©️ Copyright Outdoorways 2023</CopyrightText>
-        </FooterText>
+        <FooterContent>
+          <div>
+            <FooterText>
+              <CopyrightText>©️ Copyright Outdoorways 2023</CopyrightText>
+            </FooterText>
+          </div>
+          <SocialMediaSection>
+          <SocialMediaLink
+            href="https://www.facebook.com"
+            className="socialIcon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faFacebook} />
+          </SocialMediaLink>
+          <SocialMediaLink
+            href="https://www.instagram.com"
+            className="socialIcon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
+          </SocialMediaLink>
+          <SocialMediaLink
+            href="https://github.com/CanTekProject"
+            className="socialIcon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </SocialMediaLink>
+          <SocialMediaLink
+            href="https://www.discord.com"
+            className="socialIcon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faDiscord} />
+          </SocialMediaLink>
+        </SocialMediaSection>
+          <div>
+            <PrivacyLink to="/Privacy">Privacy</PrivacyLink>
+          </div>
+        </FooterContent>
+       
       </div>
     </FooterWrapper>
   );

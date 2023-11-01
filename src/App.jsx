@@ -7,6 +7,8 @@ import Women from './Components/Women'
 import Men from './Components/Men'
 import Camping from "./Components/Camping";
 import Footer from "./Components/Navbar/Footer";
+import Privacy from './Components/footer/privacy'
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
         <Route path="/Men" element={<Men />} />
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/Camping" element={<Camping />}/>
+        <Route path="/privacy" element={<Privacy />}/>
         </Routes>
     </div>
     </div>
