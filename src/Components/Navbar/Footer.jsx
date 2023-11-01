@@ -58,7 +58,7 @@ function Footer() {
         <FooterContent>
           <div>
             <FooterText>
-              <CopyrightText>©️ Copyright Outdoorways 2023</CopyrightText>
+              <CopyrightText>©️ Copyright Outdoorways 2020</CopyrightText>
             </FooterText>
           </div>
           <SocialMediaSection>
@@ -71,7 +71,7 @@ function Footer() {
             <FontAwesomeIcon icon={faFacebook} />
           </SocialMediaLink>
           <SocialMediaLink
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/outdoorway_ca/"
             className="socialIcon"
             target="_blank"
             rel="noopener noreferrer"

@@ -6,6 +6,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 const MainWrapper = styled.main`
   padding-bottom: 100px;
   color: #5a5a5a;
+  margin-bottom: 50px;
+
 `;
 
 const Carousel = styled.div`
