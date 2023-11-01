@@ -82,7 +82,7 @@ function Home() {
                   need for a successful camping trip.
                 </p>
                 <p>
-                  <a className="btn btn-lg btn-primary" href="#redirect">
+                  <a className="btn btn-lg btn-primary" href="camping">
                     Shop Now
                   </a>
                 </p>

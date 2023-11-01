@@ -79,10 +79,12 @@ const Navbar = () => {
   return (
     <NavbarContainer className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid">
-        <LogoImage
-          src="/images/Logo.png"
-          alt="RR Systems"
-        />
+        <Link to="/home">
+         <LogoImage
+           src="/images/Logo.png"
+           alt="RR Systems"
+         />
+        </Link>
         <NavToggler
           className="navbar-toggler"
           type="button"

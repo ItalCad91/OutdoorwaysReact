@@ -63,7 +63,7 @@ function Footer() {
           </div>
           <SocialMediaSection>
           <SocialMediaLink
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/people/Outdoorways/100067895288678/"
             className="socialIcon"
             target="_blank"
             rel="noopener noreferrer"
