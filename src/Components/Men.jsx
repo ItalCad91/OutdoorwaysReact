@@ -48,13 +48,10 @@ const Men = () => {
     setSearchInput(query);
   };
 
-  const clearSearch = () => {
-    setSearchInput("");
-  };
 
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchInput.toLowerCase())
-  );
+  ); // CASE SENSITIVITY FUNCTION TO HANDLE UPPER AND LOWER CASE SEARCHES
 
   return (
     <>
