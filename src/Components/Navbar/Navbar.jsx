@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./navbar.css";
-import SearchBar from '../SearchBar/SearchBar';
 
 const NavbarContainer = styled.nav`
   background-color: darkblue;
@@ -38,13 +37,13 @@ const NavItem = styled.li`
 `;
 
 const NavLink = styled(Link)`
-  color: white !important; /* Ensure higher specificity to override Bootstrap styles */
-  text-decoration: none !important; /* Ensure higher specificity to override Bootstrap styles */
+  color: white !important; 
+  text-decoration: none !important; 
 `;
 
 const NavLink2 = styled(Link)`
-  color: black !important; /* Ensure higher specificity to override Bootstrap styles */
-  text-decoration: none !important; /* Ensure higher specificity to override Bootstrap styles */
+  color: black !important; 
+  text-decoration: none !important; 
 `;
 
 const DropdownToggle = styled(NavLink)`
@@ -59,9 +58,9 @@ const DropdownMenu = styled.ul`
 
 const DropdownItem = styled.li`
   margin: 10px;
-  color: black !important; /* Override Bootstrap color */
+  color: white !important;
   &:hover {
-    background-color: transparent !important; /* Remove hover background color */
+    background-color: transparent !important;
   }
 `;
 

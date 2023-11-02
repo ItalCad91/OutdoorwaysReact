@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 const MainWrapper = styled.main`
-  padding-bottom: 100px;
+  margin-bottom: 150px;
   color: #5a5a5a;
 `;
 
