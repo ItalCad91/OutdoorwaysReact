@@ -1,8 +1,61 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import SearchBar from './SearchBar/SearchBar';
 
 const Men = () => {
+  const [searchInput, setSearchInput] = useState("");
+  const products = [
+    {
+      imageSrc: "../images/bootsMen.png",
+      name: "Hiking Boots",
+      description: "Durable and comfortable footwear designed for long hikes and uneven terrain, offering ample support and grip for a more secure footing.",
+      price: "$98.00",
+      link: "https://square.link/u/xcNE70hA",
+    },
+    {
+      imageSrc: "../images/softshellMen.png",
+      name: "Softshell Jacket",
+      description: "A stretchy and versatile jacket that provides protection from wind, light rain, and moderate temperatures, suitable for a wide range of outdoor activities.",
+      price: "$99.99",
+      link: "https://square.link/u/PjDDj69L",
+    },
+    {
+      imageSrc: "../images/Pole.png",
+      name: "Trekking Poles",
+      description: "Adjustable and lightweight poles that provide stability and balance while walking on rugged terrain or steep inclines, reducing the impact on knees and joints.",
+      price: "$35.00",
+      link: "https://square.link/u/HuuzjD0Z",
+    },
+    {
+      imageSrc: "../images/hatMen.png",
+      name: "Outdoor Trekking Hat",
+      description: "A wide-brimmed hat with UPF sun protection, designed to shield your face, neck, and shoulders from harmful UV rays while keeping you cool and comfortable.",
+      price: "$9.99",
+      link: "https://square.link/u/fX3BKclp",
+    },
+    {
+      imageSrc: "../images/Bottle.png",
+      name: "Insulated Camping Water Bottle",
+      description: "A vacuum-sealed bottle that keeps drinks cold or hot for hours, made of high-quality materials that are resistant to leaks and spills.",
+      price: "$29.99",
+      link: "https://square.link/u/H3HM2qU6",
+    },
+    // Add more products here
+  ];
+
+  const handleSearch = (query) => {
+    setSearchInput(query);
+  };
+
+  const clearSearch = () => {
+    setSearchInput("");
+  };
+
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchInput.toLowerCase())
+  );
+
   return (
     <>
       <meta charSet="UTF-8" />
@@ -32,54 +85,18 @@ const Men = () => {
             </p>
           </div>
         </div>
-        <form className="d-flex" role="search">
-          <input
-            className="form-control me-2"
-            type="search"
-            id="search-item"
-            placeholder="Search for a product"
-            aria-label="Search"
-          />
-          <button className="btn" type="submit">
-            Search
-          </button>
-        </form>
-        <main style={{padding:"100px"}}>
-        <Product
-          imageSrc="../images/bootsMen.png"
-          name="Hiking Boots"
-          description="Durable and comfortable footwear designed for long hikes and uneven terrain, offering ample support and grip for a more secure footing."
-          price="$98.00"
-          link="https://square.link/u/xcNE70hA"
-        />
-        <Product
-          imageSrc="../images/softshellMen.png"
-          name="Softshell Jacket"
-          description="A stretchy and versatile jacket that provides protection from wind, light rain, and moderate temperatures, suitable for a wide range of outdoor activities."
-          price="$99.99"
-          link="https://square.link/u/PjDDj69L"
-        />
-        <Product
-          imageSrc="../images/Pole.png"
-          name="Trekking Poles"
-          description="Adjustable and lightweight poles that provide stability and balance while walking on rugged terrain or steep inclines, reducing the impact on knees and joints."
-          price="$35.00"
-          link="https://square.link/u/HuuzjD0Z"
-        />
-        <Product
-          imageSrc="../images/hatMen.png"
-          name="Outdoor Trekking Hat"
-          description="A wide-brimmed hat with UPF sun protection, designed to shield your face, neck, and shoulders from harmful UV rays while keeping you cool and comfortable."
-          price="$9.99"
-          link="https://square.link/u/fX3BKclp"
-        />
-        <Product
-          imageSrc="../images/Bottle.png"
-          name="Insulated Camping Water Bottle"
-          description="A vacuum-sealed bottle that keeps drinks cold or hot for hours, made of high-quality materials that are resistant to leaks and spills."
-          price="$29.99"
-          link="https://square.link/u/H3HM2qU6"
-        />
+        <SearchBar onSearch={handleSearch} />
+        <main style={{ padding: "100px" }}>
+          {filteredProducts.map((product, index) => (
+            <Product
+              key={index}
+              imageSrc={product.imageSrc}
+              name={product.name}
+              description={product.description}
+              price={product.price}
+              link={product.link}
+            />
+          ))}
         </main>
       </div>
     </>

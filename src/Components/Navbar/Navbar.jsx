@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./navbar.css";
+import SearchBar from '../SearchBar/SearchBar';
 
 const NavbarContainer = styled.nav`
   background-color: darkblue;
@@ -142,17 +143,6 @@ const Navbar = () => {
               </NavLink>
             </NavItem>
           </NavItems>
-          <SearchForm className="d-flex" role="search">
-            <SearchInput
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </SearchForm>
         </div>
       </div>
     </NavbarContainer>
