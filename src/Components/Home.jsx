@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -61,9 +62,9 @@ function Home() {
                   outdoor ecommerce store.
                 </p>
                 <p>
-                  <a className="btn btn-lg btn-primary" href="men">
+                  <Link className="btn btn-lg btn-primary" to="/Men">
                     Shop Now
-                  </a>
+                  </Link>
                 </p>
               </CarouselCaption>
             </div>
@@ -84,9 +85,9 @@ function Home() {
                   need for a successful camping trip.
                 </p>
                 <p>
-                  <a className="btn btn-lg btn-primary" href="camping">
+                  <Link className="btn btn-lg btn-primary" to="/Camping">
                     Shop Now
-                  </a>
+                  </Link>
                 </p>
               </CarouselCaption>
             </div>
