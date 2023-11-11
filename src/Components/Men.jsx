@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import SearchBar from './SearchBar/SearchBar';
@@ -11,35 +12,35 @@ const Men = () => {
       name: "Hiking Boots",
       description: "Durable and comfortable footwear designed for long hikes and uneven terrain, offering ample support and grip for a more secure footing.",
       price: "$98.00",
-      link: "https://square.link/u/xcNE70hA",
+      link: "/MenHikingBoots",
     },
     {
       imageSrc: "../images/softshellMen.png",
       name: "Softshell Jacket",
       description: "A stretchy and versatile jacket that provides protection from wind, light rain, and moderate temperatures, suitable for a wide range of outdoor activities.",
       price: "$99.99",
-      link: "https://square.link/u/PjDDj69L",
+      link: "/MenSoftShellJacket",
     },
     {
       imageSrc: "../images/Pole.png",
       name: "Trekking Poles",
       description: "Adjustable and lightweight poles that provide stability and balance while walking on rugged terrain or steep inclines, reducing the impact on knees and joints.",
       price: "$35.00",
-      link: "https://square.link/u/HuuzjD0Z",
+      link: "/MenTrekkingPoles",
     },
     {
       imageSrc: "../images/hatMen.png",
       name: "Outdoor Trekking Hat",
       description: "A wide-brimmed hat with UPF sun protection, designed to shield your face, neck, and shoulders from harmful UV rays while keeping you cool and comfortable.",
       price: "$9.99",
-      link: "https://square.link/u/fX3BKclp",
+      link: "/MenTrekkingHat",
     },
     {
       imageSrc: "../images/Bottle.png",
       name: "Insulated Camping Water Bottle",
       description: "A vacuum-sealed bottle that keeps drinks cold or hot for hours, made of high-quality materials that are resistant to leaks and spills.",
       price: "$29.99",
-      link: "https://square.link/u/H3HM2qU6",
+      link: "/MenInsulatedWaterBottle",
     },
     // Add more products here
   ];
@@ -52,6 +53,8 @@ const Men = () => {
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchInput.toLowerCase())
   ); // CASE SENSITIVITY FUNCTION TO HANDLE UPPER AND LOWER CASE SEARCHES
+
+
 
   return (
     <>
@@ -101,6 +104,13 @@ const Men = () => {
 };
 
 const Product = ({ imageSrc, name, description, price, link }) => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(link);
+  };
+
   return (
     <>
       <hr />
@@ -115,9 +125,9 @@ const Product = ({ imageSrc, name, description, price, link }) => {
           <div className="d-flex">
             <button
               className="btn btn-primary mr-2"
-              onClick={() => window.open(link, '_blank')}
+              onClick={handleClick}
             >
-              Buy Now
+              See Product Details
             </button>
           </div>
         </div>

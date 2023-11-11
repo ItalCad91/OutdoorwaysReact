@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import SearchBar from './SearchBar/SearchBar';
@@ -11,42 +12,42 @@ const Women = () => {
       name: "Hiking Boots",
       description: "Durable and comfortable footwear designed for long hikes and uneven terrain, offering ample support and grip for a more secure footing.",
       price: "$79.99",
-      link: "https://square.link/u/4u95yc27",
+      link: "/WomenHikingBoots",
     },
     {
       imageSrc: "../images/WomenRaincoat.png",
       name: "Waterproof Jacket",
       description: "A lightweight, breathable jacket that protects against wet weather conditions while ensuring optimal ventilation and mobility for outdoor activities.",
       price: "$59.99",
-      link: "https://square.link/u/FFaQm1sQ",
+      link: "/WomenWaterProofJacket",
     },
     {
       imageSrc: "../images/Pole.png",
       name: "Trekking Poles",
       description: "Adjustable and lightweight poles that provide stability and balance while walking on rugged terrain or steep inclines, reducing the impact on knees and joints.",
       price: "$35.00",
-      link: "https://square.link/u/HuuzjD0Z",
+      link: "/WomenTrekkingPoles",
     },
     {
       imageSrc: "../images/hat.png",
       name: "Outdoor Trekking Hat",
       description: "A wide-brimmed hat with UPF sun protection, designed to shield your face, neck, and shoulders from harmful UV rays while keeping you cool and comfortable.",
       price: "$9.99",
-      link: "https://square.link/u/fX3BKclp",
+      link: "/WomenTrekkingHat",
     },
     {
       imageSrc: "../images/Bottle.png",
       name: "Insulated 1 gallon Water Bottle",
       description: "A vacuum-sealed bottle that keeps drinks cold or hot for hours, made of high-quality materials that are resistant to leaks and spills.",
       price: "$29.99",
-      link: "https://square.link/u/H3HM2qU6",
+      link: "/WomenWaterBottle",
     },
     {
       imageSrc: "../images/Softshell.png",
       name: "Softshell Jacket",
       description: "A stretchy and versatile jacket that provides protection from wind, light rain, and moderate temperatures, suitable for a wide range of outdoor activities.",
       price: "$39.99",
-      link: "https://square.link/u/Hwr1ZZjB",
+      link: "/WomenSoftshellJacket",
     },
     // Add more products here
   ];
@@ -119,6 +120,13 @@ const Women = () => {
 };
 
 const Product = ({ imageSrc, name, description, price, link }) => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(link);
+  };
+
   return (
     <>
       <hr />
@@ -133,9 +141,9 @@ const Product = ({ imageSrc, name, description, price, link }) => {
           <div className="d-flex">
             <button
               className="btn btn-primary mr-2"
-              onClick={() => window.open(link, '_blank')}
+              onClick={handleClick}
             >
-              Buy Now
+              See Product Details
             </button>
           </div>
         </div>
