@@ -25,7 +25,7 @@ const Kids = () => {
       imageSrc: "../images/trekkingPoleKids.png",
       name: "Trekking Poles",
       description: "Adjustable and lightweight poles that provide stability and balance while walking on rugged terrain or steep inclines, reducing the impact on knees and joints.",
-      price: "$29.99",
+      price: "$19.99",
       link: "/trekkingPoleKids",
     },
     {
