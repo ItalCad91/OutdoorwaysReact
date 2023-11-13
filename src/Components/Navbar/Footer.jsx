@@ -97,9 +97,9 @@ function Footer() {
         </SocialMediaSection>
           <div>
             <PrivacyLink to="/Privacy">Privacy</PrivacyLink>
-            <PrivacyLink to="/Privacy">Returns Policy</PrivacyLink>
+            {/* <PrivacyLink to="/Privacy">Returns Policy</PrivacyLink>
             <PrivacyLink to="/Privacy">Terms&Conditions</PrivacyLink>
-            <PrivacyLink to="/Privacy">Shipping</PrivacyLink>
+            <PrivacyLink to="/Privacy">Shipping</PrivacyLink> */}
           </div>
         </FooterContent>
       </div>
