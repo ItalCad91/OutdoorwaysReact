@@ -196,7 +196,7 @@ function MenPole() {
       A wide-brimmed hat with UPF sun protection, designed to shield your face, neck, and shoulders from harmful UV rays while keeping you cool and comfortable.
       </Description>
       <Price>$19.99</Price>
-      <div>
+       <div>
         <ButtonSize onClick={() => setSize('4')} selected={size === '4'}>4</ButtonSize>
         <ButtonSize onClick={() => setSize('4.5')} selected={size === '4.5'}>4.5</ButtonSize>
         <ButtonSize onClick={() => setSize('5')} selected={size === '5'}>5</ButtonSize>

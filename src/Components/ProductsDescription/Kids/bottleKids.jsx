@@ -196,8 +196,20 @@ function BottleKids() {
       </Description>
       <Price>$15.00</Price>
       <div>
-        {/* Size and Color Selection Buttons */}
-        {/* ... */}
+        <ButtonSize onClick={() => setSize('4')} selected={size === '4'}>4</ButtonSize>
+        <ButtonSize onClick={() => setSize('4.5')} selected={size === '4.5'}>4.5</ButtonSize>
+        <ButtonSize onClick={() => setSize('5')} selected={size === '5'}>5</ButtonSize>
+        <ButtonSize onClick={() => setSize('5.5')} selected={size === '5.5'}>5.5</ButtonSize>
+        <ButtonSize onClick={() => setSize('6')} selected={size === '6'}>6</ButtonSize>
+        <ButtonSize onClick={() => setSize('6.5')} selected={size === '6.5'}>6.5</ButtonSize>
+        <ButtonSize onClick={() => setSize('7')} selected={size === '7'}>7</ButtonSize>
+        <ButtonSize onClick={() => setSize('7.5')} selected={size === '7.5'}>7.5</ButtonSize>
+        <ButtonSize onClick={() => setSize('8')} selected={size === '8'}>8</ButtonSize>
+      </div>
+      <div>
+        <ButtonColor onClick={() => setColor('Red')} selected={color === 'Red'}>Red</ButtonColor>
+        <ButtonColor onClick={() => setColor('Blue')} selected={color === 'Blue'}>Blue</ButtonColor>
+        <ButtonColor onClick={() => setColor('Green')} selected={color === 'Green'}>Green</ButtonColor>
       </div>
       <ButtonPurchase onClick={handlePurchase}>🛒 Purchase</ButtonPurchase>
       
